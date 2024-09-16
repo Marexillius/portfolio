@@ -1,0 +1,654 @@
+/*--------------------------------------------------------- 
+# Styles Généraux 
+---------------------------------------------------------*/
+:root {
+    --alpha: rgba(0, 0, 0, 0);
+    --noir: #000000;
+    --dark80: #0000003b;
+    --bleufoncer: #14213D;
+    --orangejaune: #FCA311;
+    --grispale: #E5E5E5;
+    --blanc: #FFFFFF; 
+}
+
+@font-face {
+    font-family: 'Heavitas';
+    src: url(../assets/fonts/Heavitas.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'LouisGeorgeCafe_normal';
+    src: url(../assets/fonts/louis_george_cafe/Louis\ George\ Cafe.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'LouisGeorgeCafe_bold';
+    src: url(../assets/fonts/Louis\ George\ Cafe\ Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'LouisGeorgeCafe_light';
+    src: url(../assets/fonts/Louis\ George\ Cafe\ Light.ttf) format('truetype');
+}
+
+h1, .h1 {
+    font-family: 'Heavitas';
+    font-size: 45px; font-weight: 900; color: var(--bs-white);
+}
+
+@media screen and (max-width: 1140px) {
+    section .card h1, section .card .h1, .back-hero h1, .back-hero .h1 {
+        font-family: 'Heavitas';
+        font-size: 28px;
+    }
+    .FAQ h2.accordion-header h1 {
+        font-family: 'Heavitas';
+        font-size: 1.5rem;
+    }
+    section.back-hero h1 em {
+        font-size: 4rem;
+    }
+    p {
+        font-family: 'LouisGeorgeCafe_bold';
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    section.back-hero h1 em {
+        font-size: 3rem;
+    }
+}
+
+h2, .h2{
+    font-family: 'Heavitas';
+    font-size: 36px; font-weight: 700; color: var(--bs-white);
+}
+
+h3, .h3{ 
+    font-size: 18px; font-weight: 300; color: var(--bs-white);
+}
+
+h4, .h4{
+    font-size: 10px; font-weight: 600; color: var(--bs-white);
+}
+
+h5, .h5{ 
+    font-size: 8px; font-weight: 600; color: var(--bs-white);
+}
+
+h6, .h6{
+    font-size: 5px; font-weight: 300; color: var(--bs-white);
+}
+
+p {
+    font-family: 'LouisGeorgeCafe_bold';
+    font-size: 20px;
+}
+
+body {
+    background-color: var(--bs-black);
+}
+
+.separateur {
+    height: 5vmin;
+}
+
+/*---------------------------------------------------------- 
+# Section Navbar 
+----------------------------------------------------------*/ 
+
+.navbar {
+    background-color: var(--bs-black);
+    color: var(--bs-blanc);
+    font-size: 16px;
+}
+
+.barre-color-navbar {
+    height: 5em;
+    width: 100%;
+    background-image: linear-gradient(to right, var(--alpha), var(--bs-primary), var(--alpha));
+}
+
+.nav-link {
+    font-family: 'LouisGeorgeCafe_bold';
+}
+
+@media screen and (max-width: 576px) {
+    .logo {
+        width: 75%;
+    }
+}
+
+/*---------------------------------------------------------- 
+# Section Hero  
+----------------------------------------------------------*/ 
+.back-hero {
+    padding-top: 50px;
+    background-color: var(--bs-secondary);
+    background-image: url(../assets/artworks/world_of_ai-magination.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-y;
+    background-blend-mode: luminosity;
+    color: var(--bs-white);
+    min-height: 100vh;
+}
+
+.back-hero .row {
+    height: 100%;
+}
+
+.info-app {
+    background-color: var(--bs-primary);
+    border-radius: 25px;
+    max-height: 620px;
+    box-shadow: 10px 10px var(--bs-secondary);
+}
+
+.back-hero h1 {
+    color: var(--bs-white);
+}
+
+.back-hero hr {
+    width: 100%;
+    border-radius: 25px;
+    border: 5px solid var(--bs-white);
+}
+
+.back-hero h1 em {
+    font-style: normal;
+    font-family: 'Heavitas';
+    font-size: 4rem;
+    letter-spacing: -1px;
+    letter-spacing: 5px;
+}
+
+.btn {
+    height: 70px;
+    width: 75%;
+}
+
+.btn-text {
+    margin: auto;
+    font-size: 20px;
+}
+
+.app-iframe {
+    border-radius: 25px;
+    transform: scale(1.03);
+    border: 5px solid var(--bs-white);
+    background-color: var(--bs-primary);
+    border-radius: 25px;
+    min-height: 600px;
+}
+
+@media screen and (max-width: 992px) {
+    .back-hero {
+        min-height: 150vh;
+    }
+    .info-app {
+        max-height: 800px;
+    }
+    .app {
+        min-height: 800px;
+    }
+    .back-hero h1 em {
+        font-size: 10vmin;
+        letter-spacing: 0;
+    }
+    .back-hero h1 {
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .back-hero h1 em {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-height: 650px) {
+    .back-hero {
+        height: 190vh;
+    }
+}
+
+/*---------------------------------------------------------- 
+# Section Fonctionnalités  
+----------------------------------------------------------*/ 
+
+.section-feature h1 {
+    text-shadow: 3px 3px var(--bs-primary);
+}
+
+.back-section-feature {
+    background-color: var(--bs-secondary);
+    background-image: linear-gradient(to bottom, var(--bs-black) 10%, var(--bs-secondary));
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-y;
+    background-blend-mode: luminosity;
+}
+
+.section-feature {
+    color: var(--bs-white);
+}
+
+.back-section-feature .card-body {
+    background-color: var(--bs-primary);
+    color: var(--bs-white);
+    min-height: 450px;
+}
+
+.back-section-feature .card-body h1 {
+    font-size: 30px;
+}
+
+.back-section-feature .card-body h1 i {
+    text-shadow: 0 0 5px var(--bs-white);
+    font-size: 2.6rem;
+}
+
+.back-section-feature .icon {
+    z-index: 0;
+    right: 10px;
+    width: 5em;
+    height: 5em;
+    background-color: var(--bs-secondary);
+    border-radius: 50px;
+}
+
+.back-section-feature .card-body em {
+    font-style: normal;
+}
+
+/*
+.back-section-feature .card-body h1 em:hover {
+    color: var(--bs-secondary);
+    transition: 0.2s linear color;
+}
+
+.back-section-feature .card-body h1 em i:hover {
+    color: var(--bs-primary);
+    text-shadow: 0 0 5px var(--bs-primary);
+    transition: 0.2s linear color;
+}
+*/
+
+.back-section-feature .card-body .d-flex {
+    height: 100%;
+    width: 100%;
+}
+
+.back-section-feature .card-body hr {
+    width: 100%;
+    border-radius: 25px;
+    border: 5px solid var(--bs-white);
+}
+
+.back-section-feature .card-body p, .back-section-feature .text-descritpion-section-feature p {
+    line-height: 1.2em;
+    color: var(--bs-white);
+}
+
+@media screen and (max-width: 1400px) {
+    .back-section-feature .card-body {
+        background-color: var(--bs-primary);
+        color: var(--bs-white);
+        min-height: 550px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .back-section-feature .card-body {
+        background-color: var(--bs-primary);
+        color: var(--bs-white);
+        min-height: 700px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .back-section-feature .card-body {
+        background-color: var(--bs-primary);
+        color: var(--bs-white);
+        min-height: 600px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .back-section-feature .card-body {
+        background-color: var(--bs-primary);
+        color: var(--bs-white);
+        min-height: 300px;
+    }
+}
+
+/*---------------------------------------------------------- 
+# Section Voir plus 
+----------------------------------------------------------*/ 
+
+.back-avoirPlus {
+    background-color: var(--bs-secondary);
+    background-image: linear-gradient(to bottom, var(--bs-secondary), var(--bs-black) 25%, var(--alpha));
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-y;
+    background-blend-mode: hard-light;
+    min-height: 100vh;
+}
+
+.avoirPlus h1 {
+    color: var(--bs-white);
+    text-shadow: 3px 3px var(--bs-primary);
+}
+
+.avoirPlus .swiper-wrapper {
+    text-align: center;
+    color: var(--bs-white);
+}
+
+.avoirPlus .swiper {
+    height: 80vh;
+    border-radius: 10px;
+}
+
+.avoirPlus .swiper-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50px;
+    border: 5px solid var(--bs-primary);
+}
+
+.avoirPlus .swiper-slide {
+    opacity: 0.5;
+}
+
+.avoirPlus .swiper-slide-active {
+    opacity: 1;
+}
+
+.avoirPlus .btn-next-back {
+    color: var(--bs-secondary);
+    width: 25px;
+    height: 25px;
+    opacity: 0.75;
+    transition: linear 0.5s transform;
+}
+
+.avoirPlus .swiper-button-prev:active {
+    transform: translate(-5px) rotate(-20deg) scale(1.1);
+}
+
+.avoirPlus .swiper-button-next:active {
+    transform: translate(5px) rotate(20deg) scale(1.1);
+}
+
+.avoirPlus .btn-next-back:hover {
+    opacity: 1;
+}
+
+.avoirPlus .btn-next-back:active{
+    opacity: 0.90;
+}
+
+.avoirPlus .btn-next-back::before {
+    content: '';
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: -1;
+    background-color: var(--bs-primary);
+    border-radius: 50px;
+    border: 1px solid var(--bs-secondary);
+}
+
+/*---------------------------------------------------------- 
+# Section Témoignage  
+----------------------------------------------------------*/ 
+
+.back-section-testimonials {
+    background-color: var(--bs-secondary);
+    background-image: linear-gradient(to bottom, var(--bs-secondary) 25%, var(--bs-black));
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-y;
+    background-blend-mode: hard-light;
+}
+
+.section-testimonials h1 {
+    text-shadow: 5px 5px var(--bs-black);
+}
+
+.section-testimonials .card-body {
+    background-color: var(--bs-secondary);
+    min-height: 450px;
+}
+
+.section-testimonials .card:has(.col-lg-8) {
+    min-height: auto;
+}
+
+.section-testimonials p, .section-testimonials h1 {
+    color: var(--bs-primary);
+}
+.section-testimonials .card-body h1 {
+    font-size: 30px;
+}
+
+.section-testimonials .card {
+    background-color: var(--bs-secondary);
+    min-height: 500px;
+    box-shadow: 6px 6px var(--bs-primary);
+}
+
+.section-testimonials .card-body {
+    background-color: var(--bs-secondary);
+    min-height: 200px;
+}
+
+.section-testimonials .img-user img {
+    height: 20vh;
+    object-fit: cover;
+    object-position: 50% 50%;
+    border-radius: 50px;
+    box-shadow: inset 0 0 0 5px var(--bs-primary);
+}
+
+.section-testimonials .img-user .icon-testimonials {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: var(--bleufoncer);
+    background-size: 2em;
+    border-radius: 50px;
+    box-shadow: 0 0 0 3px var(--bs-primary);
+}
+
+.section-testimonials .img-user .icon-testimonials i {
+    font-size: 3em;
+}
+
+@media screen and (max-width: 1400px) {
+    .section-testimonials .card {
+        min-height: 580px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .section-testimonials .card {
+        min-height: 560px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section-testimonials .card {
+        min-height: 520px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .section-testimonials .card {
+        min-height: auto;
+    }
+    .section-testimonials .card-body {
+        min-height: auto;
+    }
+}
+
+/*---------------------------------------------------------- 
+# Section FAQ  
+----------------------------------------------------------*/
+
+
+.FAQ h1 {
+    text-shadow: 3px 3px var(--bs-primary);
+}
+
+
+.back-FAQ {
+    background-color: var(--bs-secondary);
+    background-image: linear-gradient(to bottom, var(--bs-dark) 15%, var(--alpha), var(--bs-dark)), url(../assets/artworks/Universarium.jpg);
+    background-position: 0;
+    background-size: 100%;
+}
+
+.FAQ .accordion-item, .FAQ .accordion-header {
+    background-image: linear-gradient(to bottom, var(--bs-dark), var(--alpha));
+    background-color: var(--bs-secondary);
+    color: var(--bs-primary);
+    font-size: 24px;
+}
+
+.FAQ .accordion-item {
+    box-shadow: 10px 10px var(--bs-primary);
+}
+
+.FAQ .accordion-item .accordion-body {
+    font-size: 20px;
+}
+
+.FAQ .accordion-header .accordion-button h1 {
+    font-size: 28px;
+}
+
+.FAQ .accordion-body {
+    font-family: 'LouisGeorgeCafe_bold';
+}
+
+@media screen and (max-width: 1200px) {
+    .back-FAQ {
+        background-size: 200%;
+        background-position: center;
+    }
+    .FAQ .accordion-header .accordion-button h1 {
+        font-size: 26px;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .back-FAQ {
+        background-size: 120%;
+        background-position: center;
+    }
+}
+
+/*---------------------------------------------------------- 
+# Section Infolettre
+----------------------------------------------------------*/
+
+.back-infoLettre {
+    width: 100%;
+    height: auto;
+}
+
+.back-infoLettre .img-back {
+    background-image: url(../assets/artworks/all_heat_and_no_light.jpg);
+    background-position: center;
+    background-size: cover;
+    background-color: var(--bs-secondary);
+    background-blend-mode: soft-light;
+}
+
+.infolettre {
+    background-color: var(--dark80);
+    background-image: radial-gradient(var(--dark80) 50%, var(--bs-dark));
+    border-radius: 50px;
+    text-shadow: 4px 4px var(--bs-secondary);
+    box-shadow: 10px 10px var(--bs-primary);
+    backdrop-filter: blur(3px);
+}
+
+.abonnement {
+    font-size: 24px;
+}
+
+@media screen and (max-width: 1200px) {
+    .img-back {
+        background-size: cover;
+    }
+}
+
+/*---------------------------------------------------------- 
+# Section Footer 
+----------------------------------------------------------*/
+
+footer {
+    max-height: 16rem;
+    background-color: var(--bs-black);
+}
+
+.barre-color-footer {
+    height: 0.5em;
+    width: 100%;
+    background-image: linear-gradient(to right, var(--alpha), var(--bs-primary), var(--alpha));
+    background-color: var(--bs-black);
+}
+
+p.lien-git {
+    color: var(--bs-white);
+    font-family: 'LouisGeorgeCafe_bold';
+    font-size: 16px;
+}
+
+footer .container .row div:nth-child(3) a {
+    color: var(--bs-white);
+    font-family: 'LouisGeorgeCafe_bold';
+    font-size: 16px;
+    font-style: normal;
+    text-decoration: none;
+    transition: 0.2s ease-in color;
+}
+
+footer .container .row div:nth-child(3) a:hover {
+    color: var(--bs-primary);
+    text-shadow: 0 0 3px var(--bs-primary);
+}
+
+/*---------------------------------------------------------- 
+# Section Modal abonnement 
+----------------------------------------------------------*/
+
+.modal-footer button {
+    width: 10em;
+}
+
+.modal-content {
+    box-shadow: 10px 10px var(--bs-primary);
+}
+
+.modal-content {
+    background-color: var(--bs-secondary);
+}
+
+.input {
+    font-size: 24px;
+}
+
+i.icon-modal {
+    font-size: 2em;
+    color: var(--bs-primary);
+}
