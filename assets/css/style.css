@@ -1,15 +1,13 @@
 /*--------------------------------------------------------- 
 # Styles Généraux 
 ---------------------------------------------------------*/
+
 :root {
     --alpha: rgba(0, 0, 0, 0);
-    --noir: #000000;
     --dark80: #0000003b;
     --bleufoncer: #14213D;
-    --orangejaune: #FCA311;
-    --grispale: #E5E5E5;
-    --blanc: #FFFFFF; 
 }
+
 
 @font-face {
     font-family: 'Heavitas';
@@ -29,6 +27,10 @@
 @font-face {
     font-family: 'LouisGeorgeCafe_light';
     src: url(../assets/fonts/Louis\ George\ Cafe\ Light.ttf) format('truetype');
+}
+
+body {
+    overflow-x: hidden;
 }
 
 h1, .h1 {
@@ -328,7 +330,7 @@ body {
 # Section Voir plus 
 ----------------------------------------------------------*/ 
 
-.back-avoirPlus {
+.back-projets {
     background-color: var(--bs-secondary);
     background-image: linear-gradient(to bottom, var(--bs-secondary), var(--bs-black) 25%, var(--alpha));
     background-size: cover;
@@ -338,22 +340,22 @@ body {
     min-height: 100vh;
 }
 
-.avoirPlus h1 {
+.projets h1 {
     color: var(--bs-white);
     text-shadow: 3px 3px var(--bs-primary);
 }
 
-.avoirPlus .swiper-wrapper {
+.projets .swiper-wrapper {
     text-align: center;
     color: var(--bs-white);
 }
 
-.avoirPlus .swiper {
+.projets .swiper {
     height: 80vh;
     border-radius: 10px;
 }
 
-.avoirPlus .swiper-wrapper img {
+.projets .swiper-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -362,15 +364,15 @@ body {
     border: 5px solid var(--bs-primary);
 }
 
-.avoirPlus .swiper-slide {
+.projets .swiper-slide {
     opacity: 0.5;
 }
 
-.avoirPlus .swiper-slide-active {
+.projets .swiper-slide-active {
     opacity: 1;
 }
 
-.avoirPlus .btn-next-back {
+.projets .btn-next-back {
     color: var(--bs-secondary);
     width: 25px;
     height: 25px;
@@ -378,23 +380,23 @@ body {
     transition: linear 0.5s transform;
 }
 
-.avoirPlus .swiper-button-prev:active {
+.projets .swiper-button-prev:active {
     transform: translate(-5px) rotate(-20deg) scale(1.1);
 }
 
-.avoirPlus .swiper-button-next:active {
+.projets .swiper-button-next:active {
     transform: translate(5px) rotate(20deg) scale(1.1);
 }
 
-.avoirPlus .btn-next-back:hover {
+.projets .btn-next-back:hover {
     opacity: 1;
 }
 
-.avoirPlus .btn-next-back:active{
+.projets .btn-next-back:active{
     opacity: 0.90;
 }
 
-.avoirPlus .btn-next-back::before {
+.projets .btn-next-back::before {
     content: '';
     display: inline-block;
     width: 100px;
